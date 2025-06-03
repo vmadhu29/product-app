@@ -109,3 +109,34 @@ madhu
 
 ## 📄 License
 MIT
+
+## 📬 API & Postman Collection
+
+A ready-to-import Postman collection is included as `postman_collection.json` in the project root. This collection covers all authentication and product management endpoints.
+
+### How to Use
+1. Open Postman.
+2. Click **Import** and select `postman_collection.json` from the project root.
+3. Set the `base_url` variable to your app's URL (e.g., `http://localhost:8000`).
+4. Register or login to get a token (if using API endpoints that require authentication).
+5. For protected routes, set the `token` variable in the collection to your Bearer token.
+
+### API Endpoints Covered
+- **Auth**
+  - `POST /register` — Register a new user
+  - `POST /login` — Login
+  - `POST /logout` — Logout (auth required)
+  - `POST /forgot-password` — Request password reset link
+  - `POST /reset-password` — Reset password
+  - `GET /verify-email/{id}/{hash}` — Verify email
+  - `POST /email/verification-notification` — Resend verification email
+- **User**
+  - `GET /api/user` — Get authenticated user (auth required)
+- **Products**
+  - `GET /products` — List products (auth required)
+  - `POST /products` — Create product (auth required)
+  - `GET /products/{id}` — Show product details (auth required)
+  - `PUT /products/{id}` — Update product (auth required)
+  - `DELETE /products/{id}` — Delete product (auth required)
+
+See the Postman collection for example request bodies and headers.

@@ -39,8 +39,10 @@
     <div class="container hero text-center">
         <h1 class="display-4 fw-bold mb-3">Welcome to ProductApp</h1>
         <p class="lead mb-4">A modern Laravel application for managing your products, built with love by madhu.<br>Register or log in to get started with product management, search, and more!</p>
-        <a href="{{ route('login') }}" class="btn btn-main btn-lg me-2">Login</a>
-        <a href="{{ route('register') }}" class="btn btn-outline-secondary btn-lg">Register</a>
+        <div class="text-center mt-4">
+            <a href="{{ route('login.form') }}" class="btn btn-primary me-2">Login</a>
+            <a href="{{ route('register.form') }}" class="btn btn-success">Register</a>
+        </div>
     </div>
     <!-- Features section - by madhu -->
     <div class="container my-5">

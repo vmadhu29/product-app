@@ -52,7 +52,9 @@
     </tbody>
 </table>
 <!-- Pagination links - by madhu -->
-<div>
-    {{ $products->withQueryString()->links() }}
-</div>
+@if($products->hasPages())
+    <nav aria-label="Product pagination">
+        {{ $products->withQueryString()->onEachSide(1)->links('pagination::bootstrap-5') }}
+    </nav>
+@endif
 @endsection 
